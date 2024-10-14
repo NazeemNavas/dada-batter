@@ -18,23 +18,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-      .info-box {
-  border: 1px solid #ddd; /* Optional: Adds a border to the info box */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Inner padding */
-  transition: box-shadow 0.3s; /* Smooth hover effect */
-  text-align: center; /* Center text in the box */
-  min-height: 30vh;
-  min-width: 30vw;
-}
+    
+  .info-box {
+    border: 1px solid #ddd; /* Optional: Adds a border to the info box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    transition: box-shadow 0.3s; /* Smooth hover effect */
+    text-align: center; /* Center text in the box */
+    width: 100%; /* Full width on small screens */
+    min-height: 22vh;
+  }
 
-.info-box:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Hover effect */
-}
+  .info-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Hover effect */
+  }
 
+  /* Ensures minimum height for larger screens, adapts for smaller screens */
+  @media (min-width: 992px) {
+    .info-box {
+      min-height: 30vh;
+    }
+  }
 
+  /* Reduces padding and font size for smaller screens */
+  @media (max-width: 576px) {
+    .info-box {
+      padding: 15px;
+    }
 
-    </style>
+    .info-box h3 {
+      font-size: 1.25rem;
+    }
+
+    .info-box p, .info-box a {
+      font-size: 1rem;
+    }
+  }
+</style>
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -552,35 +572,32 @@
                 <h2 class="display-4 text-center">Contact Us</h2>
               </div>
               <div class="row gy-4">
-                <div class="col-lg-6 d-flex justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
                   <div class="info-box text-center">
                     <i class="bi bi-geo-alt icon-large"></i>
                     <h3>Address</h3>
-                    <p>dada
-                      Abma batter unit
-                      <br>Padinjattinkara 
-                      , Muslim street
-                      , Kottarakkara 
-                     <br> Pin:691506
-                      </p>
+                    <p>
+                      dada Abma Batter Unit<br>
+                      Padinjattinkara, Muslim Street<br>
+                      Kottarakkara, Pin: 691506
+                    </p>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
                   <div class="info-box text-center">
                     <i class="bi bi-telephone icon-large"></i>
                     <h3>Call Us</h3>
-                    <a href="tel:+917034295044"> +91 7034295044</a>
-
+                    <a href="tel:+917034295044">+91 7034295044</a>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
                   <div class="info-box text-center">
                     <i class="bi bi-envelope icon-large"></i>
                     <h3>Email Us</h3>
                     <a href="mailto:abma.dada@gmail.com">abma.dada@gmail.com</a>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
                   <div class="info-box text-center">
                     <i class="bi bi-clock icon-large"></i>
                     <h3>Open Hours</h3>
